@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="HandheldFriendly" content="true">
+    <title><?= (isset($view) && $view === 'home' ? '' : $title . ' &raquo; ') . 'Meerkat' ?></title>
+    <link rel="stylesheet" href="/app/public/assets/css/responsive.min.css">
+    <link rel="stylesheet" href="/app/public/assets/css/style.min.css">
+    
+    <?php if(file_exists(VIEWS_PATH . '/' . $view . '/' . $view . '.min.css')) : ?>
+    <style type="text/css"><?= file_get_contents(VIEWS_PATH . '/' . $view . '/' . $view . '.min.css') ?></style>
+    <?php endif ?>
+  </head>
+  <body class="<?= $view ?><?= isset($bodyClass) && $bodyClass ? ' ' . $bodyClass : '' ?>">
+    
+    <div id="site-container">
+      <?php
+        if(isset($view) && file_exists(VIEWS_PATH . '/' . $view . '/' . $view . '.phtml')) {
+          require(VIEWS_PATH . '/' . $view . '/' . $view . '.phtml');
+        } else {
+          if(isset($viewContent)) echo $viewContent;
+            else require(VIEWS_PATH . '/404/404.phtml');
+        }
+      ?>
+    </div>
+    
+    <script type="text/javascript" src="/app/public/assets/js/scripts.min.js"></script>
+  </body>
+</html>
