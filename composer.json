@@ -1,0 +1,17 @@
+{
+  "name": "Meerkat",
+  "description": "A PHP Framework.",
+  "keywords": ["php", "framework", "router"],
+  "homepage": "http://github.com/NordlingArt/meerkat",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nordling Art",
+      "email": "info@nordlingart.se",
+      "homepage": "http://www.nordlingart.se/"
+    }
+  ],
+  "require": {
+    "leafo/scssphp": "0.0.12"
+  }
+}

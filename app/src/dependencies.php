@@ -4,15 +4,16 @@ $container = $app->getContainer();
 
 // DATABASE HANDLER
 //$container->db = function($c) {
-//  $host = 'nordlingart.se.mysql';
-//  $dbname = 'nordlingart_se_phplogin';
-//  $username = 'nordlingart_se_phplogin';
-//  $password = 'phpLogin123';
+//  preprint($c);
+//  
+//  $host = $c->dbconn['host'];
+//  $dbname = $c->dbconn['meerkat'];
+//  $username = $c->dbconn['root'];
+//  $password = $c->dbconn['root'];
 //  
 //  $pdo = new PDO('mysql:host='.$host.';dbname='.$dbname.';charset=utf8', $username, $password);
 //  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 //  $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-////  $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 //  return $pdo;
 //};
 
